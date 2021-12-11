@@ -2,17 +2,10 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family:Ayuthaya;
+    font-family:'Courier New', Courier, monospace
 
 }
-main {
-    min-height:80vh;
     
-}
-
-h2 {
-   padding: 10px;
-  }
   /*Nav bar*/
 .siteHeader {
     display: flex;
@@ -22,6 +15,7 @@ h2 {
     align-items: center;
     align-content: center;
     background-color:rgba(228, 153, 228, 0.404) ;
+    height: 70px;
   }
   .siteHeader img {
     max-width: 175px;
@@ -34,47 +28,41 @@ h2 {
     text-transform: uppercase;
     color:black;
     margin-right: 2em;
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
   nav a:hover {
     color: white;
   }
+header .mobile{
+  display:none;
+}
+/* Responsive Rules*/
+
+@media screen and (max-width:600px) {
+header .mobile{
+  display:inline-block;
+  
+}
+header .navLink{
+ display:none;
+}
+}
+
   .hero-container {
-   height:688px;
+   height:620px;
    width:100%;
   }
-  footer {
-    background-color:white;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    align-content: flex-start;
-    border-top: solid 2px black;
-    padding: 12px;
-    color: #ce7dc7;
-    font-size: 1.2em;
-    bottom: 0;
-    width: 100%;
-    
-  }
-  footer p {
-    padding-left: 5.7vw;
-  }
-  footer img {
-    max-width: 75px;
-    margin: 5px;
-  }
-  
-  footer section img {
-    max-width: 50px;
-    margin: 5px;
-  }
+  @media screen and (max-width:800px) {
+    .hero-container{
+      height:850px;
+      width: 100%
+    }
+      
+    }
 
   /*hero image*/
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url("./images/nailbackground.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.06)), url("./images/nailbackground.jpeg");
     height: 100%;
     width:100%;
     background-position: center;
@@ -90,9 +78,34 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color:black; 
+  color:white; 
+  font-size:25px;
 }
- 
+.hero-text h6{
+ font-size:20px;
+ color:white;
+}
+.inputBox2 input[type="submit"]
+{
+  width: 125px;
+  background-color:white;
+  color:black;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 20px;
+  border-radius: 12px 12px;
+  border-style:groove;
+  font-style:italic;
+  font-weight:800;
+  font-family:-apple-system;
+}
+.inputBox2:hover{
+  color:black;
+  transform:scale(1.03);
+}
+
+
 .container{
   margin:30px;
   display: flex;
@@ -106,7 +119,7 @@ h2 {
   width:300px;
   height:560px;
   margin:30px;
-  border-radius:15px;
+  border-radius:15px ;
   
 }
 
@@ -168,7 +181,6 @@ background-image: url('images/AllNatural.jpeg');
   }
 
   .card:hover{
-    cursor: pointer;
     transform: scale(1.03);
     transition: all 1s ease;
   }
@@ -181,7 +193,7 @@ background-image: url('images/AllNatural.jpeg');
     background-color:white;
     color:black;
     border: none;
-    cursor: grab;
+    cursor: pointer;
     padding: 3px;
     font-size: 12px;
     border-radius: 12px 12px;
@@ -191,11 +203,68 @@ background-image: url('images/AllNatural.jpeg');
     color:black;
     transform:scale(1.03);
   }
+  @media screen and (max-width:800px){
+    .container{
+      margin:15px;
+      display: flex;
+      justify-content: center;
+      flex-wrap:wrap;
+      gap:10px
+      
+    }
+    
+    .card {
+      width:180px;
+      height:380px;
+      background:rgb(133, 64, 64);
+      margin:15px;
+     border-radius:10px;
+     gap:
+    
+    }
+    .card-image{
+      height:250px;
+      margin-bottom:1px;
+      background-size:cover;
+      border-radius: 10px 10px 0 0;
+      background-position: center;
+    }
+    .cartbuttonForm{
+      padding:10px 40px;
+    }
+  }
+  footer {
+    background-color:white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+    padding: 12px;
+    color: #ce7dc7;
+    font-size: 1.2em;
+    bottom: 0;
+    width: 100%;
+    height:10px;
+    
+  }
+  footer p {
+    padding-left: 5.8vw;
+  }
+  footer img {
+    max-width: 100px;
+    margin: 5px;
+  }
   
+  footer section img {
+    max-width: 50px;
+    margin: 5px;
+  }
 
 .contact {
-    position: relative;
-    min-height: 100vh;
+    position:static;
+    min-height: 77vh;
     width: 100%;
     padding: 50px 100px;
     display: flex;
@@ -226,6 +295,7 @@ background-image: url('images/AllNatural.jpeg');
     width: 40%;
     padding: 40px;
     background: white;
+    border-radius: 12px 12px;
   }
   
   .contactForm h2 {
@@ -260,7 +330,7 @@ background-image: url('images/AllNatural.jpeg');
     font-size: 16px;
     margin: 10px 0;
     transition: 0.5s;
-    color: #444;
+    color:gray;
   }
   
   /*focus into box while typed/requires valid text ex-email*/
@@ -269,7 +339,7 @@ background-image: url('images/AllNatural.jpeg');
   .contactForm .inputBox textarea:focus ~ span,
   .contactForm .inputBox textarea:valid ~ span 
   {
-    color:magenta;
+    color:pink;
     font-size: 12px;
     /*moves text above actual text*/
     transform: translateY(-20px);
@@ -285,10 +355,34 @@ background-image: url('images/AllNatural.jpeg');
     cursor: pointer;
     padding: 10px;
     font-size: 18px;
+    border-radius: 15px 15px;
+    
   }
-  
+  .inputBox:hover{
+    color:black;
+    transform:scale(1.05);
+  }
+ 
   @media (max-width: 800px) {
-    .flex-container {
+    .contact {
+      position:static;
+      height: 82vh;
+      width: 100%;
+      padding: 50px 100px;
+      display: flex;
+      justify-content:center;
+      align-items: center;
       flex-direction: column;
-    }
+      background-size: cover;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/contactbg.jpeg");
+      background-position:top;
   }
+    .contactForm {
+      width: 70%;
+      padding: 40px;
+      background: white;
+      border-radius: 12px 12px;
+    }
+    
+  }
+ 
