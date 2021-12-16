@@ -330,7 +330,7 @@ background-image: url('images/AllNatural.jpeg');
     resize: none;
   }
   
-  .contactForm .inputBox span {
+  .contactForm .inputBox lable {
     position: absolute;
     left: 0;
     padding: 5px 0;
@@ -341,10 +341,10 @@ background-image: url('images/AllNatural.jpeg');
   }
   
   /*focus into box while typed/requires valid text ex-email*/
-  .contactForm .inputBox input:focus ~ span,
-  .contactForm .inputBox input:valid ~ span,
-  .contactForm .inputBox textarea:focus ~ span,
-  .contactForm .inputBox textarea:valid ~ span 
+  .contactForm .inputBox input:focus ~ lable,
+  .contactForm .inputBox input:valid ~ lable,
+  .contactForm .inputBox textarea:focus ~ lable,
+  .contactForm .inputBox textarea:valid ~ lable 
   {
     color:black;
     font-size: 12px;
