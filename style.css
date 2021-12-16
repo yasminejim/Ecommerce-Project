@@ -194,6 +194,7 @@ background-image: url('images/AllNatural.jpeg');
     text-align: center;
     color:white;
     font-size: 12px;
+    text-shadow: 2px 2px black;
   }
 
   .card:hover {
@@ -272,7 +273,9 @@ background-image: url('images/AllNatural.jpeg');
         position:fixed;
         bottom:0;
       }
-      
+      footer p{
+        font-size: 10px;
+      }
       footer img {
         max-width: 100px;
       }
