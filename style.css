@@ -7,19 +7,22 @@
 }
     
   /*Nav bar*/
-.siteHeader {
+
+.NavHeader {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items:center;
     align-content: center;
-    background-color:rgba(228, 153, 228, 0.404) ;
+    background-color: rgb(200, 149, 149);
     height: 70px;
+    top:0;
+   
   }
-  .siteHeader img {
-    max-width: 175px;
-    margin: 1px;
+  .NavHeader img{
+    max-width: 320px;
+    margin:2px;
   }
 
 
@@ -31,44 +34,29 @@
     font-size: 1.5em;
   }
   nav a:hover {
-    color: white;
+    color:rgb(237, 237, 237);
   }
 header .mobile{
   display:none;
 }
-/* Responsive Rules*/
 
-@media screen and (max-width:600px) {
-header .mobile{
-  display:inline-block;
-  
-}
-header .navLink{
- display:none;
-}
-}
 
   .hero-container {
    height:620px;
    width:100%;
   }
-  @media screen and (max-width:800px) {
-    .hero-container{
-      height:850px;
-      width: 100%
-    }
-      
-    }
 
+    
   /*hero image*/
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.06)), url("./images/nailbackground.jpeg");
-    height: 100%;
+   position:static;
+  min-height: 80vh;
     width:100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    position: static;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.06)), url("./images/nailbackground.jpeg");
     
 }
 
@@ -81,7 +69,7 @@ header .navLink{
   color:white; 
   font-size:25px;
 }
-.hero-text h6{
+.hero-text h2{
  font-size:20px;
  color:white;
 }
@@ -98,24 +86,32 @@ header .navLink{
   border-style:groove;
   font-style:italic;
   font-weight:800;
-  font-family:-apple-system;
 }
 .inputBox2:hover{
   color:black;
   transform:scale(1.03);
 }
-
+@media screen and (max-width:768px) {
+  .hero-container{
+    height:630px;
+    width: 100%
+  }
+  .hero-image{
+    min-height: 85vh;
+    width:100%;
+  }
+}
 
 .container{
   margin:30px;
   display: flex;
   justify-content: center;
   flex-wrap:wrap;
-  
+  padding-bottom:80px;
 }
 
 .card{
-  background:rgb(133, 64, 64);
+  background:rgb(108, 74, 74);
   width:300px;
   height:560px;
   margin:30px;
@@ -133,11 +129,9 @@ header .navLink{
 
 .nail-1{
 background-image: url('images/AllNatural.jpeg');
-
 }
 .nail-2{
   background-image: url('images/Baecation.jpeg');
-  
   }
 .nail-3{
     background-image: url('images/Barbie.jpeg');
@@ -171,13 +165,24 @@ background-image: url('images/AllNatural.jpeg');
   }
 
   .card h2{
-    padding:10px;
+   margin-bottom: -5px;
+    padding:1px;
     text-align: center;
+    color:white;
   }
-
+  .card h3{
+    font-size: 15px;
+    margin-bottom:-15px;
+    padding:5px;
+    text-align: center;
+    color:white;
+  }
   .card p{
+    margin-bottom: -15px;
     padding:10px;
     text-align: center;
+    color:white;
+    font-size: 12px;
   }
 
   .card:hover{
@@ -190,7 +195,7 @@ background-image: url('images/AllNatural.jpeg');
   .inputBox1 input[type="submit"]
   {
     width: 100px;
-    background-color:white;
+    background-color:rgb(237, 237, 237);
     color:black;
     border: none;
     cursor: pointer;
@@ -203,68 +208,72 @@ background-image: url('images/AllNatural.jpeg');
     color:black;
     transform:scale(1.03);
   }
-  @media screen and (max-width:800px){
-    .container{
-      margin:15px;
-      display: flex;
-      justify-content: center;
-      flex-wrap:wrap;
-      gap:10px
-      
-    }
     
-    .card {
-      width:180px;
-      height:380px;
-      background:rgb(133, 64, 64);
-      margin:15px;
-     border-radius:10px;
-     gap:
     
-    }
-    .card-image{
-      height:250px;
-      margin-bottom:1px;
-      background-size:cover;
-      border-radius: 10px 10px 0 0;
-      background-position: center;
-    }
-    .cartbuttonForm{
-      padding:10px 40px;
-    }
-  }
-  footer {
-    background-color:white;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    align-content: flex-start;
-    padding: 12px;
-    color: #ce7dc7;
-    font-size: 1.2em;
-    bottom: 0;
-    width: 100%;
-    height:10px;
-    
-  }
-  footer p {
-    padding-left: 5.8vw;
-  }
-  footer img {
-    max-width: 100px;
-    margin: 5px;
-  }
   
-  footer section img {
-    max-width: 50px;
-    margin: 5px;
-  }
-
+    @media screen and (max-width:768px){
+      
+      .container{
+        padding:70px;
+        margin:15px;
+        display: flex;
+        justify-content: center;
+        flex-wrap:wrap;
+        gap:15px;
+      }
+      .card {
+        width:260px;
+        height:380px;
+        background:rgb(108, 74, 74);
+        margin:15px;
+       border-radius:10px;
+       
+      
+      }
+      .card-image{
+        height:200px;
+        margin-bottom:1px;
+        background-size:cover;
+        border-radius: 10px 10px 0 0;
+        background-position: center;
+      }
+      
+      .cartbuttonForm{
+        padding:20px 75px;
+        margin-top: 30px;
+      }
+     
+  
+      }
+      footer {
+        background-color:white;
+        display:flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: flex-start;
+        color:rgb(108, 74, 74);
+        width: 100%;
+        position:fixed;
+        bottom:0;
+      }
+      
+      footer img {
+        max-width: 100px;
+      }
+    
+        footer .logo:last-child {
+         margin-right:20px;
+        }
+      
+      footer .logo img{
+       width:30px;
+     }
+ 
 .contact {
     position:static;
-    min-height: 77vh;
+    min-height: 80vh;
     width: 100%;
     padding: 50px 100px;
     display: flex;
@@ -276,8 +285,6 @@ background-image: url('images/AllNatural.jpeg');
     background-position:top;
 }
 
-
-
   /*contact title/styling*/
   .contact .content {
     max-width: 800px;
@@ -287,12 +294,12 @@ background-image: url('images/AllNatural.jpeg');
   .contact .content h2 {
     font-size: 40px;
     font-weight: 300;
-    color:pink; 
+    color:rgb(237, 237, 237); 
   }
   
   /*contact box info/styling*/
   .contactForm {
-    width: 40%;
+    width: 450px;
     padding: 40px;
     background: white;
     border-radius: 12px 12px;
@@ -300,7 +307,7 @@ background-image: url('images/AllNatural.jpeg');
   
   .contactForm h2 {
     font-size: 30px;
-    color:pink;
+    color:rgb(108, 74, 74);
     font-weight: 500;
   }
   
@@ -330,7 +337,7 @@ background-image: url('images/AllNatural.jpeg');
     font-size: 16px;
     margin: 10px 0;
     transition: 0.5s;
-    color:gray;
+    color:black;
   }
   
   /*focus into box while typed/requires valid text ex-email*/
@@ -339,7 +346,7 @@ background-image: url('images/AllNatural.jpeg');
   .contactForm .inputBox textarea:focus ~ span,
   .contactForm .inputBox textarea:valid ~ span 
   {
-    color:pink;
+    color:black;
     font-size: 12px;
     /*moves text above actual text*/
     transform: translateY(-20px);
@@ -349,7 +356,7 @@ background-image: url('images/AllNatural.jpeg');
   .contactForm .inputBox input[type="submit"]
   {
     width: 100px;
-    background:pink;
+    background:rgb(108, 74, 74);
     color: white;
     border: none;
     cursor: pointer;
@@ -363,26 +370,21 @@ background-image: url('images/AllNatural.jpeg');
     transform:scale(1.05);
   }
  
-  @media (max-width: 800px) {
-    .contact {
-      position:static;
-      height: 82vh;
-      width: 100%;
-      padding: 50px 100px;
-      display: flex;
-      justify-content:center;
-      align-items: center;
-      flex-direction: column;
-      background-size: cover;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/contactbg.jpeg");
-      background-position:top;
-  }
-    .contactForm {
-      width: 70%;
-      padding: 40px;
-      background: white;
-      border-radius: 12px 12px;
-    }
+  
     
+    
+    @media (max-width: 800px) {
+      .contact {
+        position:static;
+        height: 85vh;
+        width: 100%;
+        padding: 50px 100px;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+        background-size: cover;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/contactbg.jpeg");
+        background-position:top;
+    }
   }
- 
